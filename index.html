@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Конфигуратор Privé 4.0</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="boat-configurator" id="boat-configurator">
+      <section class="configurator-shell" aria-labelledby="configurator-title">
+        <div class="configurator-head">
+          <div class="brand-lockup" aria-label="Арт-Марин">
+            <div class="brand-mark" aria-hidden="true">
+              <span>A</span>
+              <span>M</span>
+            </div>
+            <div class="brand-text">
+              <p class="brand-name">Арт-Марин</p>
+              <p class="eyebrow">Privé 4.0</p>
+            </div>
+          </div>
+          <div class="configurator-title">
+            <p class="eyebrow">5 шагов</p>
+            <h1 id="configurator-title">Конфигуратор лодки</h1>
+          </div>
+        </div>
+
+        <div class="step-status" aria-live="polite">
+          <span data-step-label>Шаг 1 из 5</span>
+          <strong data-step-title>Модель</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <span class="progress-fill" data-progress-fill></span>
+        </div>
+
+        <div class="configurator-grid">
+          <section class="visual-panel" aria-label="Внешний вид лодки">
+            <img
+              class="boat-preview"
+              data-preview
+              src="1 раздел выбор цвета борта и палубы/1 раздел каталог ral/ral 9010.png"
+              alt="Лодка Privé 4.0"
+            >
+            <div class="preview-caption" data-preview-caption>Privé 4.0, RAL 9010 - Pure White</div>
+          </section>
+
+          <section class="controls-panel" aria-label="Разделы комплектации">
+            <nav class="section-tabs" aria-label="Шаги конфигуратора">
+              <button class="tab-button is-active" type="button" data-section-button="model">1. Модель</button>
+              <button class="tab-button" type="button" data-section-button="color">2. Цвет</button>
+              <button class="tab-button" type="button" data-section-button="comfort">3. Салон</button>
+              <button class="tab-button" type="button" data-section-button="power">4. Мотор</button>
+              <button class="tab-button" type="button" data-section-button="finish">5. Финал</button>
+            </nav>
+
+            <div class="section-panel is-active" data-section="model">
+              <div class="section-copy">
+                <p class="section-kicker">Шаг 1</p>
+                <h2>Модель и база</h2>
+                <p>Выберите количество мест. Состав базовой лодки обновится автоматически.</p>
+              </div>
+              <div class="choice-row" role="group" aria-label="Количество мест">
+                <button class="choice-button is-selected" type="button" data-model="3">3 места</button>
+                <button class="choice-button" type="button" data-model="4">4 места</button>
+              </div>
+              <div class="base-card">
+                <h3 data-base-title>Privé 4.0, 3 места</h3>
+                <p class="base-price" data-base-price>1 399 000 ₽</p>
+                <ul class="base-list" data-base-list></ul>
+              </div>
+            </div>
+
+            <div class="section-panel" data-section="color">
+              <div class="section-copy">
+                <p class="section-kicker">Шаг 2</p>
+                <h2>Цвет корпуса</h2>
+                <p>Выберите цвет корпуса из каталога RAL. Фото и стоимость обновятся сразу.</p>
+              </div>
+              <div class="color-catalog" aria-label="Каталог цветов RAL" data-color-catalog></div>
+              <div class="option-grid" data-options="color"></div>
+            </div>
+
+            <div class="section-panel" data-section="comfort">
+              <div class="section-copy">
+                <p class="section-kicker">Шаг 3</p>
+                <h2>Салон и удобство</h2>
+                <p>Добавьте опции для кокпита, приборной зоны и повседневного использования.</p>
+              </div>
+              <div class="option-grid" data-options="comfort"></div>
+            </div>
+
+            <div class="section-panel" data-section="power">
+              <div class="section-copy">
+                <p class="section-kicker">Шаг 4</p>
+                <h2>Двигатель и электрооборудование</h2>
+                <p>Выберите ДВС или электро, затем добавьте совместимые опции.</p>
+              </div>
+              <div class="choice-row" role="group" aria-label="Тип силовой установки">
+                <button class="choice-button is-selected" type="button" data-power="dvs">ДВС</button>
+                <button class="choice-button" type="button" data-power="electric">Электро</button>
+              </div>
+              <div class="option-grid" data-options="power"></div>
+            </div>
+
+            <div class="section-panel" data-section="finish">
+              <div class="section-copy">
+                <p class="section-kicker">Шаг 5</p>
+                <h2>Финал и данные для КП</h2>
+                <p>Выберите отделку, доставку и заполните данные клиента для персонального PDF.</p>
+              </div>
+              <div class="option-grid" data-options="finish"></div>
+              <form class="client-form" data-client-form>
+                <label>
+                  <span>Имя клиента</span>
+                  <input type="text" data-client-field="name" placeholder="Иван">
+                </label>
+                <label>
+                  <span>Телефон</span>
+                  <input type="tel" data-client-field="phone" placeholder="+7 999 000-00-00">
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" data-client-field="email" placeholder="mail@example.ru">
+                </label>
+                <label>
+                  <span>Город</span>
+                  <input type="text" data-client-field="city" placeholder="Москва">
+                </label>
+                <label class="wide-field">
+                  <span>Комментарий</span>
+                  <textarea data-client-field="comment" rows="3" placeholder="Пожелания по комплектации"></textarea>
+                </label>
+              </form>
+            </div>
+
+            <div class="wizard-actions">
+              <button class="secondary-button" type="button" data-prev-step>Назад</button>
+              <button class="next-button" type="button" data-next-step>Далее</button>
+            </div>
+          </section>
+
+          <aside class="summary-panel" aria-label="Итоговая комплектация">
+            <h2>Итог</h2>
+            <dl class="summary-list">
+              <div>
+                <dt>Модель</dt>
+                <dd data-summary-model>Privé 4.0, 3 места</dd>
+              </div>
+              <div>
+                <dt>Силовая установка</dt>
+                <dd data-summary-power>ДВС</dd>
+              </div>
+              <div>
+                <dt>Цвет корпуса</dt>
+                <dd data-summary-color>RAL 9010 - Pure White</dd>
+              </div>
+              <div>
+                <dt>Базовая стоимость</dt>
+                <dd data-summary-base>1 399 000 ₽</dd>
+              </div>
+              <div>
+                <dt>Опции</dt>
+                <dd data-summary-options>0 ₽</dd>
+              </div>
+              <div>
+                <dt>Итого</dt>
+                <dd class="total-price" data-summary-total>1 399 000 ₽</dd>
+              </div>
+            </dl>
+            <div class="selected-options">
+              <h3>Выбрано</h3>
+              <ul data-selected-list>
+                <li>Без дополнительных опций</li>
+              </ul>
+            </div>
+            <button class="request-button" type="button" data-request>Скачать КП в PDF</button>
+            <button class="secondary-button copy-button" type="button" data-copy-request>Скопировать заявку</button>
+            <p class="request-note" data-request-note aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
